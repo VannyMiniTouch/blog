@@ -12,8 +12,22 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path="/" index element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={  <Redirect><Login /></Redirect> } />
+        <Route
+          path="/register"
+          element={
+            <Redirect>
+              <Register />
+            </Redirect>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Redirect>
+              <Login />
+            </Redirect>
+          }
+        />
         <Route path="/admin/*" element={<AdminRoute />} />
       </Routes>
     </AuthProvider>

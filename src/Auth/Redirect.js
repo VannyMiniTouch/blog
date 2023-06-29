@@ -6,18 +6,6 @@ const Redirect = ({ children }) => {
   const token = window.localStorage.getItem("token");
   const IsAdmin = window.localStorage.getItem("IsAdmin");
   useEffect(() => {
-    // if (!!token) {
-    //   if (!!IsAdmin) {
-    //     navigate("/admin/dashboard");
-    //   } else {
-    //     navigate("/");
-    //   }
-    // }
-
-    // if (token) {
-    //     IsAdmin ? navigate("/admin/dashboard") : navigate("/");
-    //   }
-    
     token 
       ? IsAdmin
         ? navigate("/admin/dashboard")
